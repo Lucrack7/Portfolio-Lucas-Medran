@@ -1,0 +1,187 @@
+/* CSS Variables for Theme Switching */
+:root {
+    /* Dark Mode (Default) */
+    --bg-color: #1a1a2e;
+    /* Deep blue/purple background */
+    --text-color: #e4e4e7;
+    /* Light text */
+    --header-bg: #023453;
+    --card-bg: #023453;
+    /* Card background */
+    --accent-color: #ffc107;
+    /* Bright gold/yellow accent */
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --border-color: #4a4a6e;
+    --placeholder-bg: #2c2c54;
+    --placeholder-text: #ffc107;
+}
+
+body.light-mode {
+    /* Light Mode */
+    --bg-color: #f3f4f6;
+    /* Light gray background */
+    --text-color: #1f2937;
+    /* Dark text */
+    --header-bg: #ffffff;
+    --card-bg: #98ecff91;
+    /* White card background */
+    --accent-color: #0075ab;
+    /* Green accent */
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #e5e7eb;
+    --placeholder-bg: #e5e7eb;
+    --placeholder-text: #1f2937;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Header and Cards */
+header {
+    background-color: var(--header-bg);
+}
+
+/* .section>div:not(.logo):not(.galeria):not(.pagination-controls):not(.fifa-card-container) {
+    background-color: var(--card-bg);
+} */
+
+.item {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+/* Accents */
+.logo,
+.active-nav,
+.filter-btn.active,
+.pagination-controls button,
+.item a {
+    color: var(--accent-color) !important;
+}
+
+.active-nav {
+    border-bottom: 2px solid var(--accent-color) !important;
+}
+
+.filter-btn.active {
+    border-color: var(--accent-color) !important;
+    font-weight: 700;
+}
+
+.home-social a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Responsive grid for gallery */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.item img {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Mobile Menu Animation */
+.nav-links.active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Placeholder image style uses CSS variables */
+.placeholder-photo {
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+    /* Glowing effect */
+}
+
+/* --- FIFA Card Styles --- */
+.fifa-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.fifa-card {
+    background: var(--card-bg);
+    /* Use card background */
+    border: 4px solid var(--accent-color);
+    border-radius: 1.5rem;
+    /* Large rounded corners */
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.fifa-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--accent-color);
+    z-index: 10;
+}
+
+.stat-bar {
+    height: 0.75rem;
+    background-color: var(--border-color);
+    /* Background of the bar */
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.stat-fill {
+    height: 100%;
+    background-color: var(--accent-color);
+    /* Fill color */
+    transition: width 1s ease-out;
+    border-radius: 9999px;
+}
+
+.stat-line {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr auto;
+    align-items: center;
+    gap: 1rem;
+}
+
+.stat-value {
+    font-weight: 700;
+    color: var(--accent-color);
+}

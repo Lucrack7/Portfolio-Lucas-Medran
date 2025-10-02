@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Lucrack</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        xintegrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="img/jpn" href="https://png.pngtree.com/png-clipart/20230427/original/pngtree-3-star-png-image_9112613.png">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a href="#inicio" onclick="showSection('inicio')" class="flex items-center space-x-2">
+                <div class="logo block items-center space-x-1 text-2xl font-extrabold text-[#ffc107]">
+                    <div class="stars space-x-1">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h1>Lucrack</h1>
+                </div>
+            </a>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#inicio" data-section="inicio"
+                    class="nav-link text-black-300 hover:text-[#ffc107] transition duration-300 active-nav">Inicio</a>
+                <a href="#servicios" data-section="servicios"
+                    class="nav-link text-black-300 hover:text-[#ffc107] transition duration-300">Servicios</a>
+                <a href="#habilidades" data-section="habilidades"
+                    class="nav-link text-black-300 hover:text-[#ffc107] transition duration-300">Habilidades</a>
+                <a href="#trabajos" data-section="trabajos"
+                    class="nav-link text-black-300 hover:text-[#ffc107] transition duration-300">Trabajos</a>
+                <a href="#contacto" data-section="contacto"
+                    class="nav-link text-black-300 hover:text-[#ffc107] transition duration-300">Contacto</a>
+            </nav>
+            <!-- Theme Toggle & Burger Menu -->
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle"
+                    class="p-2 rounded-full text-black-300 hover:text-gray-400 transition duration-150 focus:outline-none"
+                    aria-label="Toggle Dark Mode">
+                    <!-- Icon will be updated by JS -->
+                    <i class="fa-solid fa-sun w-6 h-6"></i>
+                </button>
+                <div id="burger" class="md:hidden cursor-pointer p-2" onclick="toggleMenu()">
+                    <div class="line1 w-6 h-0.5 bg-white my-1 transition-all duration-300"></div>
+                    <div class="line2 w-6 h-0.5 bg-white my-1 transition-all duration-300"></div>
+                    <div class="line3 w-6 h-0.5 bg-white my-1 transition-all duration-300"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Nav Links -->
+        <div class="md:hidden">
+            <ul id="nav-links"
+                class="nav-links absolute top-16 left-0 w-full bg-[#2c2c54] transform -translate-x-full transition-transform duration-300 z-40 space-y-2 p-4">
+                <li><a href="#inicio" data-section="inicio" onclick="showSection('inicio'); toggleMenu()"
+                        class="block p-2 text-center text-white hover:bg-[#ffc107] hover:text-[#1a1a2e] rounded active-nav">Inicio</a>
+                </li>
+                <li><a href="#servicios" data-section="servicios" onclick="showSection('servicios'); toggleMenu()"
+                        class="block p-2 text-center text-white hover:bg-[#ffc107] hover:text-[#1a1a2e] rounded">Servicios</a>
+                </li>
+                <li><a href="#habilidades" data-section="habilidades" onclick="showSection('habilidades'); toggleMenu()"
+                        class="block p-2 text-center text-white hover:bg-[#ffc107] hover:text-[#1a1a2e] rounded">Habilidades</a>
+                </li>
+                <li><a href="#trabajos" data-section="trabajos" onclick="showSection('trabajos'); toggleMenu()"
+                        class="block p-2 text-center text-white hover:bg-[#ffc107] hover:text-[#1a1a2e] rounded">Trabajos</a>
+                </li>
+                <li><a href="#contacto" data-section="contacto" onclick="showSection('contacto'); toggleMenu()"
+                        class="block p-2 text-center text-white hover:bg-[#ffc107] hover:text-[#1a1a2e] rounded">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- 1. Inicio Section (Updated Layout for Photo) -->
+        <section id="inicio" class="section py-16">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center bg-[var(--card-bg)] p-8 rounded-xl shadow-2xl">
+
+                <!-- Columna de Descripción -->
+                <div class="md:col-span-2 space-y-4 text-left">
+                    <p class="text-xl font-semibold text-[var(--accent-color)]">¡Hola!</p>
+                    <h2 class="text-4xl sm:text-5xl font-extrabold text-[var(--accent-color)] leading-tight">Bienvenido
+                        a mi Portafolio</h2>
+                    <p class="text-xl text-[var(--text-color)] max-w-3xl">Soy Lucas Medran, Estudiante de Ingeniería en Sistemas y Desarrollador Front-End con experiencia en <strong>HTML, CSS, JavaScript, TypeScript, React y Angular.</strong> <br> <br>
+                    Me gusta crear <strong>sitios y aplicaciones modernas, dinámicas y fáciles de usar,</strong> combinando buen diseño con funcionalidad. <br> <br>
+                    Me considero <strong>creativo, resolutivo y con ganas de aprender siempre,</strong> y estoy buscando mi primera oportunidad para aplicar mis conocimientos, ganar experiencia profesional y seguir creciendo como desarrollador.</p>
+                    <div class="pt-4">
+                            <a href="descarga/CV--Lucas--Medran.pdf" target="_blank"><button class="inline-block bg-[var(--accent-color)] text-[var(--bg-color)] font-bold py-3 px-6 rounded-lg transition duration-300 hover:opacity-90">Descargar CV</button></a>
+                    </div>
+                </div>
+
+                <!-- Columna de Foto -->
+                <div class="flex justify-center md:justify-end order-first md:order-last">
+                    <!-- Placeholder para la foto. Reemplaza el 'src' con la URL de tu foto. -->
+                    <img src="img/foto-inicio.jpg"
+                        onerror="this.onerror=null;this.src='https://placehold.co/300x300/1a1a2e/ffc107?text=Tu+Foto';"
+                        alt="Foto de perfil de Lucas Medran"
+                        class="w-64 h-64 object-cover rounded-full shadow-2xl placeholder-photo">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Servicios Section (Placeholder) -->
+        <section id="servicios" class="section py-16 hidden-section">
+            <h2 class="text-4xl font-extrabold mb-8 text-center text-[var(--accent-color)]">Mis Servicios</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl shadow-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
+                    <i class="fa-solid fa-code text-3xl text-[var(--accent-color)] mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--text-color)]">Desarrollo Frontend</h3>
+                    <p class="text-[var(--text-color)] opacity-75">Diseño y desarrollo de interfaces modernas, rápidas y responsivas, utilizando <strong>HTML, CSS, JavaScript, TypeScript, React y Angular</strong>. Me enfoco en que cada proyecto sea atractivo, intuitivo y fácil de usar.</p>
+                </div>
+                <div class="p-6 rounded-xl shadow-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
+                    <i class="fa-solid fa-code text-3xl text-[var(--accent-color)] mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--text-color)]">Optimización y Mantenimiento</h3>
+                    <p class="text-[var(--text-color)] opacity-75">Me encargo de optimizar el rendimiento de aplicaciones y sitios web, asegurando tiempos de carga rápidos, buen SEO y un código limpio. También brindo soporte y mejoras continuas para mantener los proyectos actualizados</p>
+                </div>
+                <div class="p-6 rounded-xl shadow-xl border border-[var(--border-color)] bg-[var(--card-bg)]">
+                    <i class="fa-solid fa-mobile-screen-button text-3xl text-[var(--accent-color)] mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-[var(--text-color)]">Diseño Web Responsivo</h3>
+                    <p class="text-[var(--text-color)] opacity-75">Creo sitios web que se adaptan a cualquier dispositivo. Cuido los detalles de <strong>usabilidad, accesibilidad y experiencia del usuario,</strong> para que la navegación sea fluida y agradable.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Habilidades Section (FIFA Card Style + Tecnologías List) -->
+        <section id="habilidades" class="section py-16 hidden-section">
+            <h2 class="text-4xl font-extrabold mb-8 text-center text-[var(--accent-color)]">FICHA TÉCNICA Y TECNOLOGÍAS</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                
+                <!-- Columna 1: FIFA Card -->
+                <div class="fifa-card-container lg:p-0">
+                    <div id="fifa-card" class="fifa-card">
+                        <!-- Top Card Info (OVR and Position) -->
+                        <div class="flex items-center space-x-4 mb-6">
+                            <div class="text-6xl font-black text-center" id="player-ovr-container">
+                                <!-- OVR will be populated by JS -->
+                            </div>
+                            <div class="flex-grow">
+                                <p class="text-xl font-bold uppercase text-[var(--accent-color)]">Frontend Dev</p>
+                                <h3 class="text-3xl font-extrabold text-[var(--text-color)]">L. MEDRAN</h3>
+                            </div>
+                        </div>
+                        
+                        <!-- Player Image/Photo Placeholder -->
+                        <div class="flex justify-center mb-6">
+                            <img src="img/foto-habilidades.png"
+                                onerror="this.onerror=null;this.src='https://placehold.co/200x200/1a1a2e/ffc107?text=PLAYER+PIC';"
+                                alt="Foto de perfil de Lucas Medran"
+                                class="w-48 h-48 object-cover rounded-xl shadow-2xl placeholder-photo">
+                        </div>
+
+                        <!-- Skills/Stats Block -->
+                        <div id="stats-container" class="space-y-4">
+                            <!-- Stats will be dynamically inserted here -->
+                        </div>
+                        
+                        <!-- Footer Info (Country/League - Static) -->
+                        <div class="flex justify-between items-center mt-6 pt-4 border-t border-[var(--border-color)]">
+                            <div class="text-sm font-semibold opacity-70">
+                                <p>Córdoba, Argentina <i class="fa-solid ml-1"><img src="img/incons/banArg.png"></i></p>
+                            </div>
+                            <div class="text-sm font-semibold opacity-70">
+                                <p>DEV <i class="fa-solid --text-color-white ml-1"><img src="img/incons/escProgramacion.png"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Lista de Tecnologías (Añadido) -->
+                <div class="p-8 rounded-xl shadow-2xl border border-[var(--border-color)]">
+                    <div class="content-items">
+                        <span class="text-3xl font-bold mb-6 block text-[var(--accent-color)] border-b pb-2 border-[var(--border-color)]">Tecnologías Dominadas</span>
+                        <ul class="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-6 text-xl">
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-html5 text-orange-500 text-2xl"></i><span>HTML</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-css3-alt text-blue-500 text-2xl"></i><span>CSS</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-square-js text-yellow-500 text-2xl"></i><span>JavaScript</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-react text-blue-400 text-2xl"></i><span>React</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><span class="text-blue-500 text-2xl font-black">TS</span><span>TypeScript</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-angular text-red-600 text-2xl"></i><span>Angular</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-node-js text-green-500 text-2xl"></i><span>Node.js</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-java text-red-500 text-2xl"></i><span>Java</span></li>
+                            <li class="flex items-center space-x-2 text-lg font-medium"><i class="fa-brands fa-python text-yellow-400 text-2xl"></i><span>Python</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <p class="mt-10 text-center text-black-100 --text-color-gray">Los valores de la ficha es de modo ilustrativo.</p>
+        </section>
+
+        <!-- 4. Trabajos (Projects) Section - Dynamic and Paginated -->
+        <section id="trabajos" class="section py-16 hidden-section">
+            <h2 class="text-4xl font-extrabold mb-8 text-center text-[var(--accent-color)]">MIS PROYECTOS</h2>
+
+            <!-- Project Filter Navigation -->
+            <nav id="filter-nav" class="flex flex-wrap justify-center space-x-2 sm:space-x-6 mb-10 text-lg font-medium">
+                <button
+                    class="filter-btn p-2 rounded-lg transition duration-300 border-b-2 border-transparent hover:text-[var(--accent-color)]"
+                    data-category="all" onclick="verCategoria('all')">Todos</button>
+                <button
+                    class="filter-btn p-2 rounded-lg transition duration-300 border-b-2 border-transparent hover:text-[var(--accent-color)] active"
+                    data-category="html/css/js" onclick="verCategoria('html/css/js')">Html-Css-Js</button>
+                <button
+                    class="filter-btn p-2 rounded-lg transition duration-300 border-b-2 border-transparent hover:text-[var(--accent-color)]"
+                    data-category="react" onclick="verCategoria('react')">React</button>
+                <button
+                    class="filter-btn p-2 rounded-lg transition duration-300 border-b-2 border-transparent hover:text-[var(--accent-color)]"
+                    data-category="angular" onclick="verCategoria('angular')">Angular</button>
+                <button
+                    class="filter-btn p-2 rounded-lg transition duration-300 border-b-2 border-transparent hover:text-[var(--accent-color)]"
+                    data-category="python" onclick="verCategoria('python')">Python</button>
+            </nav>
+
+            <!-- Projects Gallery Container -->
+            <div id="projects-gallery" class="galeria grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Dynamic project items will be rendered here -->
+            </div>
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-10">
+                <p class="text-xl opacity-75">No se encontraron proyectos en esta categoría.</p>
+            </div>
+
+            <!-- Pagination Controls -->
+            <div id="pagination-controls" class="flex justify-center items-center space-x-4 mt-12 pagination-controls">
+                <!-- Dynamic pagination buttons will be rendered here -->
+            </div>
+        </section>
+
+        <!-- 5. Contacto Section -->
+        <section id="contacto" class="section py-16 hidden-section">
+            <h2 class="text-4xl font-extrabold mb-8 text-center text-[var(--accent-color)]">Contáctame</h2>
+            <div
+                class="max-w-xl mx-auto p-8 rounded-xl shadow-2xl border border-[var(--border-color)] bg-[var(--card-bg)]">
+                <!-- IMPORTANT: Keep the original FormSubmit configuration -->
+                <form id="entrada" class="contact-form space-y-4"
+                    action="https://formsubmit.co/lucasmedran.dev@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Tu nombre" required
+                        class="w-full p-3 rounded-lg bg-[var(--bg-color)] border border-[var(--border-color)] focus:border-[var(--accent-color)] focus:ring focus:ring-[var(--accent-color)]/50 text-[var(--text-color)] placeholder-gray-400">
+                    <input type="email" name="email" placeholder="Tu correo" required
+                        class="w-full p-3 rounded-lg bg-[var(--bg-color)] border border-[var(--border-color)] focus:border-[var(--accent-color)] focus:ring focus:ring-[var(--accent-color)]/50 text-[var(--text-color)] placeholder-gray-400">
+                    <textarea name="message" placeholder="Tu mensaje" required rows="5"
+                        class="w-full p-3 rounded-lg bg-[var(--bg-color)] border border-[var(--border-color)] focus:border-[var(--accent-color)] focus:ring focus:ring-[var(--accent-color)]/50 text-[var(--text-color)] placeholder-gray-400"></textarea>
+                    <button
+                        class="btn-cont w-48 text-center ml-40 bg-[var(--accent-color)] text-[var(--bg-color)] font-bold py-3 px-6 rounded-lg transition duration-300 hover:opacity-90 hover:shadow-lg"
+                        type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+
+            <div class="flex justify-center mt-10">
+                <div class="w-full max-w-xl">
+                    <ul class="home-social flex justify-center space-x-6">
+                        <li class="info">
+                            <a href="https://www.linkedin.com/in/lucas-medran-b676b0249/" target="_blank"
+                                class="text-4xl text-black-300 hover:text-[var(--accent-color)] transition duration-300"
+                                aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="info">
+                            <a href="https://github.com/Lucrack7" target="_blank"
+                                class="text-4xl text-black-300 hover:text-[var(--accent-color)] transition duration-300"
+                                aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="info">
+                            <!-- Placeholder for phone/WhatsApp -->
+                            <a href="tel:+3512829973" target="_blank"
+                                class="text-4xl text-black-300 hover:text-[var(--accent-color)] transition duration-300"
+                                aria-label="WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="info">
+                            <a href="mailto:lucasmedran.dev@gmail.com" target="_blank"
+                                class="text-4xl text-black-300 hover:text-[var(--accent-color)] transition duration-300"
+                                aria-label="Email">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-6 text-center text-black-400 border-t border-[var(--border-color)] bg-[var(--header-bg)]">
+        <p class="text-sm">© 2024 - Todos los derechos reservados - Portafolio creado por <a
+                href="https://www.linkedin.com/in/lucas-medran-b676b0249/" target="_blank"
+                class="text-[var(--accent-color)] hover:opacity-90 transition duration-300">Lucas Medran</a>.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
