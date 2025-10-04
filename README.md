@@ -26,7 +26,7 @@ Mi objetivo con este portafolio es ofrecer una visión clara de mis competencias
 
 Autor:
 
-Lucas Medran
+Lucas Medran.
 
 LinkedIn: https://www.linkedin.com/in/lucas-medran-b676b0249/
 
