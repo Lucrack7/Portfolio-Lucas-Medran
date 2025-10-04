@@ -17,7 +17,7 @@ Mi objetivo con este portafolio es ofrecer una visión clara de mis competencias
 - HTML5  
 - CSS3 / SCSS  
 - JavaScript  
-- Bootstrap  
+- Tailwind   
 - Netlify (para despliegue)  
 
 <img width="1920" height="1080" alt="Captura de pantalla 2025-10-03 010148" src="https://github.com/user-attachments/assets/5dfbb774-da8d-46c7-b443-8f53d55b93cd" />
