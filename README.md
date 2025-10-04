@@ -23,16 +23,13 @@ Mi objetivo con este portafolio es ofrecer una visión clara de mis competencias
 <img width="1920" height="1080" alt="Captura de pantalla 2025-10-03 010148" src="https://github.com/user-attachments/assets/5dfbb774-da8d-46c7-b443-8f53d55b93cd" />
 <img width="1920" height="1080" alt="Captura de pantalla 2025-10-03 010215" src="https://github.com/user-attachments/assets/48de9b79-c521-4ebb-bbfd-eb77c8c485f6" />
 
-Demo en línea
-
-Ver portafolio web
 
 Autor:
 
 Lucas Medran
 
-LinkedIn
+LinkedIn: https://www.linkedin.com/in/lucas-medran-b676b0249/
 
-GitHub
+GitHub: https://github.com/Lucrack7
 
-Portafolio
+Portafolio: https://lucasmedran.netlify.app/#inicio
